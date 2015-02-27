@@ -25,4 +25,18 @@ var mlgstats = [
 '{ "team": "FaZe", "player": "Enable", "kd": 1.18, "kdperc": 10, "slayer": 28.98, "maps": 16}',
 '{ "team": "FaZe", "player": "Slasher", "kd": 1.28, "kdperc": 5, "slayer": 30.42, "maps": 16}',
 ];
-console.log(mlgstats); 
+//console.log(mlgstats); 
+
+function filter(array, test) {
+  var passed = [];
+  for (var i = 0; i < array.length; i++) {
+        if (test(array[i]))
+          passed.push(array[i]);
+        }
+        return passed;
+  }
+
+console.log(filter(mlgstats, function(player) {
+  return player.team > FaZe;
+}));
+
