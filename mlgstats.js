@@ -36,7 +36,7 @@ function filter(array, test) {
         return passed;
   }
 
-console.log(filter(mlgstats, function(player) {
-  return player.team > FaZe;
+console.log(filter(mlgstats, function(person) {
+  return person.kd > 1.00; 
 }));
 
