@@ -38,7 +38,17 @@ function filter(array, test) {
         return passed;
   }
 
-console.log(filter(mlgstats, function(person) {
-  return person.kd > 1.00; 
-}));
+function map(array, transform) {
+  var mapped = [];
+  for (var i = 0; i < array.length; i++)
+        mapped.push(transform(array[i]));
+  return mapped;
+}
 
+var overhalf = mlgstats(filter(function(person) {
+  return 100 - person.kdperc > 50;
+}));
+console.log(map(overhalf, function(person) {
+        return person.name;
+}));
+~            
