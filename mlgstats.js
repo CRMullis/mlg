@@ -3,6 +3,8 @@
 	February 18th 2015
 */
 // Code keeps track of Team Name, Player Name, Kill Death Ratio, Kill Death Percentile, Slayer (Kills per minute *10), and Maps won.
+// kd = # of kills per death ratio.   kdperc = percentile in which the players kd lay in.
+// maps = number of maps their team won
 var mlgstats = [
 { "team": "OpTic Gaming", "player": "Scumpii", "kd": 1.29, "kdperc": 1, "slayer": 34.82, "maps": 15},
 { "team": "OpTic Gaming", "player": "Formal", "kd": 1.27, "kdperc": 10, "slayer": 32.04, "maps": 15},
